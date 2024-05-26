@@ -1,0 +1,14 @@
+{
+  "name": "language-translator-app",
+  "version": "1.0.0",
+  "description": "A language translator app in JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=65520"
+  },
+  "author": "Yvette",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset default margin and padding for all elements, set box-sizing to border-box, and set font-family */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Center the body content vertically and horizontally, add padding, set minimum height, and background image */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: url('Image.jpg') no-repeat center center/cover; /* Example of an image background */
+}
+
+/* Center the heading text and add margin below it */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the main container */
+.container {
+  max-width: 690px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8); /* Transparent background */
+  border-radius: 7px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
+  text-align: center; /* Center text within the container */
+}
+
+/* Style the wrapper */
+.wrapper {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.6); /* Transparent background for the wrapper */
+}
+
+/* Style the text input container */
+.wrapper .text-input {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style the "to-text" textarea */
+.text-input .to-text {
+  border-radius: 0px;
+  border-left: 1px solid #ccc;
+}
+
+/* Style the textarea */
+.text-input textarea {
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Style placeholder text in the textarea */
+.text-input textarea::placeholder {
+  color: #b7b6b6;
+}
+
+/* Flexbox layout for controls, list items, and icons */
+.controls, li, .icons, .icons i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Style the controls list */
+.controls {
+  list-style: none;
+  padding: 12px 15px;
+}
+
+/* Style the icons container */
+.controls .row .icons {
+  width: 38%;
+}
+
+/* Style individual icons */
+.controls .row .icons i {
+  width: 50px;
+  color: #060606;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease; /* Added color transition */
+  justify-content: center;
+}
+
+/* Style the "from" icons container */
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+}
+
+/* Style the "to" icons container */
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+
+/* Style the select dropdown */
+.controls .row select {
+  color: #333;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+/* Style the scrollbar in the textarea */
+.text-input textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Style the scrollbar in the select dropdown */
+.controls .row select::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Style the scrollbar track */
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Style the scrollbar thumb */
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 8px;
+}
+
+/* Style the scrollbar thumb in the select dropdown */
+.controls .row select::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+/* Style the exchange icon */
+.controls .exchange {
+  color: #040404;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+/* Scale the icon when active */
+.controls i:active {
+  transform: scale(0.9);
+}
+
+/* Change icon color on hover */
+.controls .row .icons i:hover {
+  color: #5372F0;
+}
+
+/* Style the button */
+.container button {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  background: #5372F0;
+  transition: background 0.3s ease; /* Transition effect for hover */
+}
+
+/* Change button background color on hover */
+.container button:hover {
+  background: #4159D0;
+}
+
+/* Change select text color on hover */
+.controls .row select:hover {
+  color: #5372F0;
+}
+
+/* Change background color of options on hover */
+.controls .row select option:hover {
+  background: #eee;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 660px) {
+  .container {
+    padding: 20px;
+  }
+  .wrapper .text-input {
+    flex-direction: column;
+  }
+  .text-input .to-text {
+    border-left: 0px;
+    border-top: 1px solid #ccc;
+  }
+  .text-input textarea {
+    height: 200px;
+  }
+  .controls .row .icons {
+    display: none;
+  }
+  .container button {
+    padding: 13px;
+    font-size: 16px;
+  }
+  .controls .row select {
+    font-size: 16px;
+  }
+  .controls .exchange {
+    font-size: 14px;
+  }
+}
